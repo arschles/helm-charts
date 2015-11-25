@@ -7,7 +7,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    app: deis-builder
+    name: deis-builder
   template:
     metadata:
       labels:
