@@ -14,13 +14,13 @@ spec:
         name: deis-builder
     spec:
       containers:
-      - name: deis-builder
-        image: quay.io/deis/builder
-        ports:
-          - containerPort: 2223
-            name: ssh
-          - containerPort: 3000
-            name: fetcher
-        env:
-          - name: "EXTERNAL_PORT"
-            value: "2223"
+        - name: deis-builder
+          image: quay.io/deis/builder
+          ports:
+            - containerPort: 2223
+              name: ssh
+            - containerPort: 3000
+              name: fetcher
+          env:
+            - name: "EXTERNAL_PORT"
+              value: "2223"
