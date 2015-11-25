@@ -13,9 +13,10 @@ spec:
       labels:
         app: deis-minio
     spec:
+      imagePullPolicy: true
       containers:
         - name: deis-minio
-          image: quay.io/minio
+          image: quay.io/deis/minio
           ports:
             - containerPort: 9000
           command:
