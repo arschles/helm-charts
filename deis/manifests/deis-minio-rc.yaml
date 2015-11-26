@@ -13,7 +13,6 @@ spec:
       labels:
         app: deis-minio
     spec:
-      imagePullPolicy: true
       containers:
         - name: deis-minio
           image: quay.io/deis/minio
@@ -33,7 +32,7 @@ spec:
       volumes:
         - name: minio-admin
           secret:
-          secretName: minio-admin
+            secretName: minio-admin
         - name: minio-user
           secret:
-          secretName: minio-user
+            secretName: minio-user
