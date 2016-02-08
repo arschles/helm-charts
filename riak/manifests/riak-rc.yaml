@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: riak
-        image: quay.io/arschles/riak:devel
+        image: deis/riak
         env:
         - name:  RIAK_MASTER
           value: "1"
