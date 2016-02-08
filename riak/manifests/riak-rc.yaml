@@ -11,10 +11,14 @@ spec:
     spec:
       containers:
       - name: riak
-        image: deis/riak
+        image: quay.io/arschles/riak:devel
         env:
         - name:  RIAK_MASTER
           value: "1"
+        - name: DEIS_RIAK_CLUSTER_SERVICE_HOST
+          value: "nothing" # if RIAK_MASTER is set to 1, this value is ignored
+        - name: DEIS_RIAK_CLUSTER_SERVICE_PORT
+          value: "1" # if RIAK_MASTER is set to 1, this value is ignored
         ports:
         - containerPort: 8087
         - containerPort: 8098
